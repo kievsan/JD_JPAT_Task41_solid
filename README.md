@@ -55,8 +55,8 @@ AbstractItemstPage  - выводит список элементов и кома
 
 #### Dependency Inversion Principle
 
-Объекту класса `kievsan.view.impl.OrderPresenterImpl` в работе требуется представить в текстовом виде объекты `ShoppingCart` и `Delivery`.
+Объекту класса `kievsan.view.impl.OrderViewerImpl` в работе требуется представить в текстовом виде объекты `ShoppingCart` и `Delivery`.
 
-Он не создает экземпляры `ShoppingCartPresenterImpl` и `DeliveryPresenterImpl` самостоятельно, чтобы не зависеть от конкретных классов и реализации. `DeliveryPresenterImpl` получает необходимые ему объекты через параметры конструктора.
+Он не создает экземпляры `ShoppingCartViewerImpl` и `DeliveryViewerImpl` самостоятельно, чтобы не зависеть от конкретных классов и реализации. `DeliveryViewerImpl` получает необходимые ему объекты через параметры конструктора.
 
-Готовые объекты внедряются через [использование интерфейса](https://github.com/kievsan/JD_JPAT_Task41_solid/blob/master/src/main/java/ru/mail/kievsan/view/impl/OrderViewerImpl.java#L15) `Presenter<T>`. Поэтому внедрить можно любую реализацию подходящую по типу.
+Готовые объекты внедряются через [использование интерфейса](https://github.com/kievsan/JD_JPAT_Task41_solid/blob/master/src/main/java/ru/mail/kievsan/view/impl/OrderViewerImpl.java#L15) `Viewer<T>`. Поэтому внедрить можно любую реализацию, подходящую по типу.
